@@ -1,0 +1,666 @@
+
+/* ========================================
+   CONFIGURACION GLOBAL
+======================================== */
+
+html{
+    width: 100%;
+    overflow-x: hidden;
+
+    /* HACE QUE TODO ESCALE EN GENERAL */
+    font-size: clamp(12px, 0.85vw, 16px);
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #F4F0DD;
+    color: #244539;
+    overflow-x: hidden;
+
+    /* ESCALADO GENERAL */
+    zoom: 1;
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+
+.container{
+
+    display: flex;
+
+    width: 100%;
+
+    max-width: 1920px;
+
+    margin: auto;
+
+    align-items: stretch;
+
+    transform-origin: top center;
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar{
+
+    width: 15rem;
+
+    min-width: 15rem;
+
+    background: #F8F6EF;
+
+    padding: 1.5rem;
+
+    border-right: 1px solid #D6D4B5;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+}
+
+.sidebar h3{
+
+    color: #244539;
+
+    margin-top: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    font-size: 1rem;
+}
+
+.sidebar ul{
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.sidebar li{
+
+    padding: 0.7rem 0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    font-size: 0.9rem;
+}
+
+.sidebar li:hover{
+
+    color: #426546;
+}
+
+.sidebar p{
+
+    margin: 0.7rem 0;
+}
+
+.sidebar p a{
+
+    display: flex;
+
+    gap: 0.5rem;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 0.85rem;
+}
+
+.sidebar p a:hover{
+
+    color: #426546;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo{
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 2rem;
+}
+
+.logo img{
+
+    width: 10rem;
+
+    border-radius: 1rem;
+
+    display: block;
+}
+
+/* ========================================
+   CONTENIDO
+======================================== */
+
+.contenido{
+
+    flex: 1;
+
+    padding: 1.2rem;
+
+    box-sizing: border-box;
+
+    width: calc(100% - 15rem);
+}
+
+/* ========================================
+   BANNER
+======================================== */
+
+.portada{
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.portada img{
+
+    width: 100%;
+
+    height: 20rem;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 1rem;
+}
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu{
+
+    margin: 1rem 0 2rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+}
+
+.menu button{
+
+    padding: 0.7rem 1rem;
+
+    border: none;
+
+    border-radius: 0.6rem;
+
+    background: #D6D4B5;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    color: #244539;
+
+    font-size: 0.75rem;
+}
+
+.menu button:hover{
+
+    background: #426546;
+
+    color: white;
+}
+
+.menu button.active{
+
+    background: orange;
+
+    color: white;
+}
+
+/* ========================================
+   SECCIONES
+======================================== */
+
+.seccion{
+
+    margin-top: 2.5rem;
+}
+
+.seccion h2{
+
+    margin-bottom: 1rem;
+
+    font-size: 1.3rem;
+}
+
+/* ========================================
+   SLIDER
+======================================== */
+
+.slider-wrapper{
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.slider{
+
+    display: flex;
+
+    gap: 1rem;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    width: 100%;
+
+    padding: 0.3rem;
+
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar{
+
+    display: none;
+}
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card{
+
+    flex: 0 0 calc((100% - 3rem) / 4);
+
+    background: white;
+
+    border-radius: 1rem;
+
+    padding: 0.9rem;
+
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    overflow: hidden;
+
+    min-width: 0;
+}
+
+.card:hover{
+
+    transform: translateY(-0.3rem);
+}
+
+.card img{
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 0.8rem;
+
+    display: block;
+}
+
+.card p{
+
+    font-weight: bold;
+
+    font-size: 0.8rem;
+
+    margin-top: 0.8rem;
+
+    min-height: 2.5rem;
+
+    line-height: 1.4;
+}
+
+.card span{
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    color: #426546;
+}
+
+/* ========================================
+   FLECHAS
+======================================== */
+
+.flecha{
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 2.6rem;
+
+    height: 2.6rem;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(36,69,57,0.92);
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition: 0.3s;
+}
+
+.flecha:hover{
+
+    background: #426546;
+}
+
+.izquierda{
+
+    left: -1rem;
+}
+
+.derecha{
+
+    right: -1rem;
+}
+
+/* ========================================
+   DETALLE
+======================================== */
+
+.detalle-container{
+
+    display: flex;
+
+    gap: 2rem;
+
+    margin-top: 1.2rem;
+
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.detalle-container img{
+
+    width: 45%;
+
+    max-width: 31rem;
+
+    border-radius: 1rem;
+
+    object-fit: cover;
+
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.detalle-info{
+
+    flex: 1;
+}
+
+.detalle-info h2{
+
+    font-size: 2.3rem;
+
+    margin-bottom: 1rem;
+}
+
+.detalle-info h3{
+
+    color: orange;
+
+    font-size: 2rem;
+
+    margin-bottom: 1.2rem;
+}
+
+#detalle-desc{
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+#detalle{
+
+    display: none;
+
+    width: 100%;
+
+    margin-top: 2rem;
+}
+
+#detalle-desc li{
+
+    list-style: none;
+
+    position: relative;
+
+    padding-left: 1.4rem;
+
+    margin-bottom: 0.5rem;
+}
+
+#detalle-desc li::before{
+
+    content: "✔";
+
+    position: absolute;
+
+    left: 0;
+
+    color: green;
+
+    font-weight: bold;
+}
+
+/* ========================================
+   BOTON WHATSAPP
+======================================== */
+
+.btn-wsp{
+
+    display: inline-block;
+
+    margin-top: 1rem;
+
+    background: #244539;
+
+    color: #F4F0DD;
+
+    padding: 0.9rem 1.4rem;
+
+    border-radius: 0.8rem;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+}
+
+.btn-wsp:hover{
+
+    background: #426546;
+}
+
+.btn-wsp i{
+
+    margin-right: 0.3rem;
+}
+
+/* ========================================
+   ICONOS
+======================================== */
+
+.fa-whatsapp{
+
+    color: #25D366;
+}
+
+.fa-instagram{
+
+    color: #E1306C;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width: 1200px){
+
+    .card{
+
+        flex: 0 0 calc((100% - 2rem) / 3);
+    }
+}
+
+@media(max-width: 900px){
+
+    .container{
+
+        flex-direction: column;
+    }
+
+    .sidebar{
+
+        width: 100%;
+
+        min-width: 100%;
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #D6D4B5;
+    }
+
+    .contenido{
+
+        width: 100%;
+    }
+
+    .card{
+
+        flex: 0 0 calc((100% - 1rem) / 2);
+    }
+
+    .detalle-container{
+
+        flex-direction: column;
+    }
+
+    .detalle-container img{
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .detalle-info h2{
+
+        font-size: 1.8rem;
+    }
+
+    .detalle-info h3{
+
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 600px){
+
+    html{
+
+        font-size: 13px;
+    }
+
+    .contenido{
+
+        padding: 0.8rem;
+    }
+
+    .portada img{
+
+        height: 14rem;
+    }
+
+    .card{
+
+        flex: 0 0 100%;
+    }
+
+    .flecha{
+
+        width: 2.2rem;
+
+        height: 2.2rem;
+
+        font-size: 1rem;
+    }
+
+    .izquierda{
+
+        left: -0.5rem;
+    }
+
+    .derecha{
+
+        right: -0.5rem;
+    }
+
+    .menu{
+
+        justify-content: center;
+    }
+
+    .menu button{
+
+        width: 100%;
+    }
+}
