@@ -664,3 +664,26 @@ body{
         width: 100%;
     }
 }
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer{
+
+    width: 100%;
+
+    background: #244539;
+
+    color: #F4F0DD;
+
+    text-align: center;
+
+    padding: 1rem;
+
+    margin-top: 3rem;
+
+    font-size: 0.9rem;
+
+    box-sizing: border-box;
+}
