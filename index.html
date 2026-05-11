@@ -60,14 +60,35 @@
             </a>
         </p>
 
-        <h3>CATEGORÍAS</h3>
+<h3>CONSULTA CON NOSOTROS</h3>
 
-        <ul>
-            <li onclick="filtrar('inicio')">Inicio</li>
-            <li onclick="filtrar('promocion')">Promoción</li>
-            <li onclick="filtrar('plantas')">Plantas Interior</li>
-            <li onclick="filtrar('mantenimiento')">Mantenimiento</li>
-        </ul>
+    <div class="consulta-box">
+
+        <label>¿Cuál es su nombre?</label>
+        <input type="text"
+        id="nombre"
+        placeholder="Ingrese su nombre">
+
+        <label>¿Qué servicio necesita?</label>
+        <input type="text"
+        id="servicio"
+        placeholder="Ej: mantenimiento de jardín">
+
+        <label>¿Cuál es su consulta?</label>
+
+        <textarea
+        id="consulta"
+        placeholder="Escriba aquí su consulta"></textarea>
+
+        <button
+        class="btn-consulta"
+        onclick="enviarConsulta()">
+
+            Enviar consulta
+
+        </button>
+
+    </div>
 
     </aside>
 
